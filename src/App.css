@@ -1,0 +1,203 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: rgb(63, 81, 181);
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-section .title h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.centre ul {
+  display: flex;
+  gap: 15px;
+}
+
+.centre ul li {
+  list-style: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.centre ul li:hover {
+  color: #ffcc00;
+}
+
+.search input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  transition: border 0.3s ease;
+}
+
+.search input:focus {
+  outline: none;
+  border-color: rgb(63, 81, 181);
+}
+
+.right {
+  display: flex;
+  gap: 15px;
+}
+
+.signin, .cart {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signin:hover, .cart:hover {
+  background-color: #ffcc00;
+  color: #333;
+}
+
+/* Banner Section */
+.banner-section {
+  margin: 20px 0;
+}
+
+.banner-box {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.banner-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Collection Section */
+.collection-section {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.collection-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: rgb(63, 81, 181);
+}
+
+.collection-section .banner-box {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto 20px auto; /* Center the ladies banner */
+}
+
+.collection-section .banner-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures proper alignment and scaling */
+}
+
+.men-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.men-images img {
+  width: calc(33.333% - 15px);
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.men-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Section */
+.footer-section {
+  margin: 20px;
+  text-align: center;
+  background-color: rgb(63, 81, 181);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.footer-section .banner-box img {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-section .centre ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-section .search input {
+    width: 100%;
+  }
+
+  .men-images img {
+    width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 480px) {
+  .header-section .title h2 {
+    font-size: 1.2rem;
+  }
+
+  .men-images img {
+    width: 100%;
+  }
+
+  .collection-section h2 {
+    font-size: 1.5rem;
+  }
+}
